@@ -13,8 +13,8 @@ You can move back to your time by clicking on Return button.
 
 
 We have used  
-# # MATRIX EFFECT ON EACH PAGE
-# # Animated Realtime showing clock on Frontpage
-# # Neon Effect on multiple buttons on each page
-# # Carousel Effect to show images 
-# # Breadcrumb
+## MATRIX EFFECT ON EACH PAGE
+## Animated Realtime showing clock on Frontpage
+## Neon Effect on multiple buttons on each page
+## Carousel Effect to show images 
+## Breadcrumb
