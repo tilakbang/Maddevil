@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AVENIR WEB | Welcome to Future</title>
+    <link rel="shortcut icon" href="/IEEE_bluewhitebg.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #1b1b1b;
+        }
+
+        #container {
+            position: relative;
+        }
+
+        #clock {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #canvas {
+            width: 100%;
+            height: 800px;
+        }
+
+        .time {
+            margin: 100px auto;
+            background: rgb(12, 12, 12);
+            color: #fff;
+            border: 7px solid rgb(255, 252, 252);
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            padding: 8px;
+            text-align: center;
+            width: 500px;
+        }
+
+        .hms {
+            font-size: 68pt;
+            font-weight: 200;
+        }
+
+        .ampm {
+            font-size: 22pt;
+        }
+
+        .date {
+            font-size: 15pt;
+        }
+
+        nav {
+            background: #1c1c17;
+            height: 80px;
+            width: auto;
+        }
+
+        nav ul {
+            float: left;
+            margin-left: 45px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 7px 13px;
+            border-radius: 5px 20px 20px 5px;
+            text-transform: uppercase;
+            border: 3px solid rgb(184, 181, 181);
+        }
+
+        nav ul li a:hover {
+            background: #8ce436;
+            color: #1b1b1b;
+        }
+
+        #above {
+            position: absolute;
+            top: 24%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 4rem;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        .Png {
+            position: absolute;
+            right: 35px;
+        }
+
+        #bottom {
+            position: absolute;
+            top: 64%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 2rem;
+            color: white;
+            font-family: 'Montserrat';
+            font-weight: 800;
+        }
+
+        .imgbox {
+            background-image: url(/Gadget.jpg);
+            background-size: 100% 100%;
+            height: auto;
+            width: 50%;
+            margin: 10px;
+            border: 7px solid #8ce436;
+            border-radius: 15px;
+        }
+
+        .txtbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin: 5px;
+            width: 50%;
+            border-radius: 15px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-left: 15px;
+            color: #8ce436;
+            font-family: 'Montserrat';
+            font-weight: 600;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            line-height: 2;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1b1b1b;
+            height: 100%;
+            width: 100%;
+        }
+
+        .bttn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            margin-top: 35px;
+            margin-bottom: 20px;
+        }
+
+        .bttn button {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 50px;
+            padding: 25px;
+            border: none;
+            background: #1b1b1b;
+            color: #8ce436;
+            border: 1px solid #8ce436;
+            box-shadow: 0 0 5px #8ce436, 0 0 5px #8ce436 inset;
+            font-weight: 800;
+        }
+
+        .bttn button:hover {
+            color: #fff;
+            box-shadow: inset 0 0 10px #8ce436, 0 0 20px #8ce436 inset, 0 0 20px #8ce436 inset;
+            cursor: pointer;
+        }
+
+        #icon {
+            font-size: large;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <nav>
+            <div class="Png">
+                <img src="/IEEE_whitenobg.png" alt="" height="80px" width="200px">
+            </div>
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+            </ul>
+        </nav>
+        <canvas id="canvas">
+        </canvas>
+        <div id="above">
+            Welcome to Time Travel WEB.
+        </div>
+        <div id="clock">
+            <div class="time">
+                <span class="hms"></span>
+                <span class="ampm"></span>
+                <br>
+                <span class="date"></span>
+            </div>
+        </div>
+        <div id="bottom">
+            This is your Time
+        </div>
+    </div>
+    <div class="box">
+
+        <div class="txtbox">
+            "AVENIR" is a gadget which grants user the power to travel across different timelines. This is the
+            power to travel into the future or into the past. <br>
+            In the year 2027, a person named "Hector" claimed to be one of the time travelers. But none of the people
+            believed him and thus considered him to be mentally affected. But one day he suddenly disappeared. He was
+            nowhere to be found. After some intense searching in his house a box was found. This box contained a wrist
+            watch type gadget with a certain note. The note read "To everyone who thought me to be a liar, this is a
+            solid proof of me being a time traveler. 'AVENIR' is a gadget which allows one to defy the natural laws
+            and makes it possible to time-travel. Consider this as a parting gift and handle it with care." <br>
+            After some intense research humanity has finally been able to replicate these gadgets and the use of gadgets
+            is now done using a Website called "AVENIR-WEB"
+        </div>
+        <div class="imgbox">
+            <img src="/Gadget.jpg" alt="" width="100%" height="auto">
+
+        </div>
+    </div>
+    <div class="bttn">
+        <a href="/nextpage.html"><button>WAY TO TIME TRAVEL</button></a>
+    </div>
+
+
+    <script type="text/javascript">
+        canvas.height = window.screen.height;
+        canvas.width = window.screen.width;
+
+        var columns = []
+        var character = 0;
+        for (i = 0; i < 256; columns[i++] = 1);
+
+        function step() {
+            canvas.getContext('2d').fillStyle = 'rgba(0,0,0,0.05)';
+            canvas.getContext('2d').fillRect(0, 0, canvas.width, canvas.height);
+
+            canvas.getContext('2d').fillStyle = '#0F0';
+
+            columns.map(function (value, index) {
+                canvas.getContext('2d').fillText(character, index * 10, value);
+                if (character == 0)
+                    character = 1;
+                else
+                    character = 0;
+
+                columns[index] = value > 758 + Math.random() * 1e4 ? 0 : value + 10
+            })
+        }
+
+        setInterval(step, 65)
+
+        function updateTime() {
+            var dateInfo = new Date();
+            var hr,
+                _min = (dateInfo.getMinutes() < 10) ? "0" + dateInfo.getMinutes() : dateInfo.getMinutes(),
+                sec = (dateInfo.getSeconds() < 10) ? "0" + dateInfo.getSeconds() : dateInfo.getSeconds(),
+                ampm = (dateInfo.getHours() >= 12) ? "PM" : "AM";
+
+            if (dateInfo.getHours() == 0) {
+                hr = 12;
+            } else if (dateInfo.getHours() > 12) {
+                hr = dateInfo.getHours() - 12;
+            } else {
+                hr = dateInfo.getHours();
+            }
+
+            var currentTime = hr + ":" + _min + ":" + sec;
+
+            document.getElementsByClassName("hms")[0].innerHTML = currentTime;
+            document.getElementsByClassName("ampm")[0].innerHTML = ampm;
+
+            var dow = [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ],
+                month = [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ],
+                day = dateInfo.getDate();
+                year = dateInfo.getFullYear();
+
+            var currentDate = dow[dateInfo.getDay()] + ", " + day + " " + month[dateInfo.getMonth()] + " " + year;
+
+            document.getElementsByClassName("date")[0].innerHTML = currentDate;
+        };
+
+        updateTime();
+        setInterval(function () {
+            updateTime()
+        }, 1000);
+    </script>
+</body>
+
+</html>
